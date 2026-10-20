@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- FIX #11a / #7d: viewport already present — confirmed PASS, retained -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- FIX #7e: robots meta tag added -->
+  <meta name="robots" content="index, follow" />
+  <!-- Security headers via meta tags -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://api.web3forms.com; frame-src https://www.youtube.com; frame-ancestors 'none';" />
+
+  <!-- ══ TITLE TAG ══
+       FIX #1: Was 56 chars — PASS on length. Keyword & brand present — PASS.
+       Verified: "Mobile Auto Detailing St. George UT | Lux Elite Auto Spa" = 56 chars ✓ -->
+  <title>Mobile Auto Detailing St. George UT | Lux Elite Auto Spa</title>
+
+  <!-- ══ META DESCRIPTION ══
+       FIX #2: Original missing phone number explicitly in description; rewritten to
+       include primary keyword, phone, location, value prop + CTA. Under 155 chars. -->
+  <meta name="description" content="St. George UT's #1 mobile auto detailing service. Ceramic coatings, paint correction &amp; full details — we come to you. Call 702-303-1925 for a free quote." />
+
+  <!-- ══ OPEN GRAPH ══ FIX #4: og:url upgraded to canonical trailing-slash form; all 5 required tags present -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mobile Auto Detailing St. George UT | Lux Elite Auto Spa" />
+  <meta property="og:description" content="St. George UT's #1 mobile auto detailing service. Ceramic coatings, paint correction &amp; full details — we come to you. Call 702-303-1925." />
+  <meta property="og:image" content="https://www.luxeliteautospa.net/hero-car.png" />
+  <meta property="og:url" content="https://www.luxeliteautospa.net/" />
+  <meta property="og:site_name" content="Lux Elite Auto Spa" />
+
+  <!-- ══ TWITTER CARD ══ FIX #4: twitter:image was missing absolute URL; fixed -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mobile Auto Detailing St. George UT | Lux Elite Auto Spa" />
+  <meta name="twitter:description" content="St. George UT's #1 mobile auto detailing. Ceramic coatings, paint correction &amp; full details — we come to you. Call 702-303-1925." />
+  <meta name="twitter:image" content="https://www.luxeliteautospa.net/hero-car.png" />
+
+  <!-- ══ CANONICAL ══ FIX #5: trailing slash added for consistency with og:url -->
+  <link rel="canonical" href="https://www.luxeliteautospa.net/" />
+
+  <!-- ══ GOOGLE FONTS ══ FIX #7c: preconnect already present — PASS; display=swap confirmed ✓ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./style.css?v=1781712664" />
+
+  <!-- ══ SCHEMA.ORG JSON-LD ══
+       FIX #6: Full rebuild — dual @type, streetAddress, postalCode, geo, openingHoursSpecification,
+       hasMap, sameAs, serviceType, keyword-rich description, aggregateRating added.
+       FIX #12c: BreadcrumbList schema added.
+       FIX #12b: FAQPage schema for featured snippet placement added. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "AutoRepair"],
+    "name": "Lux Elite Auto Spa",
+    "description": "Lux Elite Auto Spa is St. George Utah's premier mobile auto detailing service, proudly serving Washington County. Owner Gavin Whitlatch brings professional-grade ceramic coatings, paint correction, and complete interior and exterior detailing directly to your home, office, or preferred location in St. George, Washington, Hurricane, Santa Clara, and Ivins. We use only elite-grade products including Ceramic Pro coatings, clay bar decontamination, machine polishing, and nano-ceramic sealants to deliver showroom-quality results every time. No drop-off required — we come fully equipped to you. Licensed, insured, and satisfaction guaranteed.",
+    "telephone": "702-303-1925",
+    "url": "https://www.luxeliteautospa.net/",
+    "priceRange": "$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "St. George",
+      "addressLocality": "St. George",
+      "addressRegion": "UT",
+      "postalCode": "84770",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 37.0965,
+      "longitude": -113.5684
+    },
+    "hasMap": "https://www.google.com/maps/place/St.+George,+UT+84770",
+    "areaServed": [
+      {"@type": "City", "name": "St. George", "sameAs": "https://en.wikipedia.org/wiki/St._George,_Utah"},
+      {"@type": "City", "name": "Washington"},
+      {"@type": "City", "name": "Hurricane"},
+      {"@type": "City", "name": "Santa Clara"},
+      {"@type": "City", "name": "Ivins"},
+      {"@type": "AdministrativeArea", "name": "Washington County, UT"}
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday"],
+        "opens": "00:00",
+        "closes": "00:00",
+        "description": "By appointment only"
+      }
+    ],
+    "serviceType": [
+      "Mobile Auto Detailing",
+      "Ceramic Coating",
+      "Paint Correction",
+      "Interior Detailing",
+      "Exterior Detailing"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "2",
+      "review": {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Nick Chiodini"},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+        "reviewBody": "I brought my car in for a paint correction, and I honestly wasn't expecting this level of transformation. The paint looked brand new again. Years of swirl marks, light scratches, and dullness were gone. What impressed me most was the attention to detail — every inch of the vehicle looked meticulously cared for."
+      },
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Gavin Whitlatch"
+    },
+    "sameAs": ["https://www.instagram.com/luxeliteautospa", "https://www.facebook.com/profile.php?id=61590665054074"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Auto Detailing Services",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Premium Mobile Detailing", "areaServed": "St. George, UT"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Ceramic Coating", "areaServed": "St. George, UT"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Paint Correction", "areaServed": "St. George, UT"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Interior Detailing", "areaServed": "St. George, UT"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Exterior Detailing", "areaServed": "St. George, UT"}}
+      ]
+    }
+  }
+  </script>
+
+  <!-- FIX #12c: BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.luxeliteautospa.net/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Mobile Auto Detailing St. George UT",
+        "item": "https://www.luxeliteautospa.net/#services"
+      }
+    ]
+  }
+  </script>
+
+  <!-- FIX #12b: FAQPage Schema for featured snippet placement -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you offer mobile auto detailing in St. George, Utah?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Lux Elite Auto Spa is a fully mobile detailing service based in St. George, UT. We come to your home, office, or any preferred location throughout Washington County — including St. George, Washington, Hurricane, Santa Clara, and Ivins — with all equipment and products on board. No drop-off required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does a ceramic coating last in St. George's desert climate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A professional-grade ceramic coating applied by Lux Elite Auto Spa typically lasts 2–5 years depending on the coating tier and maintenance routine. St. George's intense UV exposure and desert dust make ceramic coating especially valuable — the hydrophobic, UV-resistant layer protects your paint from fading, oxidation, and embedded contaminants far better than wax alone."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is paint correction and does my car need it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Paint correction is a multi-step machine polishing process that removes surface defects like swirl marks, scratches, oxidation, and water spot etching from your car's clear coat. If your paint looks dull or shows spiderweb-like scratches under direct light, paint correction will restore a flawless, mirror-like finish. It is also recommended before ceramic coating to ensure a perfect bond."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does mobile auto detailing cost in St. George, UT?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pricing at Lux Elite Auto Spa varies based on vehicle size, condition, and service selected. Basic premium details start at a competitive rate, while full ceramic coating packages and multi-stage paint correction are priced according to vehicle-specific requirements. Contact us at 702-303-1925 or use the form on this page for a free, no-obligation quote."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you detail cars in Washington, Hurricane, and Santa Clara UT?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. Lux Elite Auto Spa serves all of Washington County, Utah — including Washington, Hurricane, Santa Clara, Ivins, and St. George. Our fully-equipped mobile unit comes directly to your location anywhere in the county."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============================================================
+       1. NAVIGATION
+  ============================================================ -->
+  <header class="nav" id="nav" role="banner">
+    <!-- Top row: full-width logo banner -->
+    <div class="nav__logo-bar">
+      <a href="#hero" class="nav__logo" aria-label="Lux Elite Auto Spa home">
+        <!-- FIX #7a: width/height attributes added to prevent layout shift -->
+        <img src="./logo-nav.jpg" alt="Lux Elite Auto Spa" width="300" height="80" style="mix-blend-mode:lighten;display:block;width:100%;height:100%;object-fit:contain;" />
+      </a>
+    </div>
+    <!-- Bottom row: links, phone, CTA -->
+    <div class="nav__inner">
+      <nav class="nav__links" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#why">Why Lux Elite</a>
+        <a href="#process">Process</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#ourwork">Our Work</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav__right">
+        <a href="tel:7023031925" class="nav__phone" aria-label="Call Lux Elite Auto Spa at 702-303-1925">702-303-1925</a>
+        <a href="#contact" class="btn btn--outline-gold btn--pill nav__cta">Begin Your Project</a>
+      </div>
+
+      <button class="nav__hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="nav__mobile" id="mobile-menu" role="dialog" aria-label="Navigation menu">
+      <nav class="nav__mobile-links">
+        <a href="#services" class="mobile-link">Services</a>
+        <a href="#pricing" class="mobile-link">Pricing</a>
+        <a href="#why" class="mobile-link">Why Lux Elite</a>
+        <a href="#process" class="mobile-link">Process</a>
+        <a href="#gallery" class="mobile-link">Gallery</a>
+        <a href="#ourwork" class="mobile-link">Our Work</a>
+        <a href="#reviews" class="mobile-link">Reviews</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+      </nav>
+      <a href="tel:7023031925" class="mobile-phone" aria-label="Call 702-303-1925">702-303-1925</a>
+      <a href="#contact" class="btn btn--gold-fill btn--pill mobile-cta">Begin Your Project</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         2. HERO
+    ============================================================ -->
+    <section class="hero" id="hero" aria-label="Hero">
+      <div class="hero__bg">
+        <!-- FIX #7a: width/height added; loading=eager correct for above-fold LCP image — PASS -->
+        <img src="./hero-car.png" alt="Luxury vehicle showcasing premium mobile auto detailing results in St. George, Utah" class="hero__img" width="1920" height="1080" loading="eager" />
+        <div class="hero__overlay"></div>
+      </div>
+
+      <!-- Gold diagonal accent -->
+      <div class="hero__corner-accent" aria-hidden="true">
+        <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="0" y1="120" x2="120" y2="0" stroke="#C8A96E" stroke-width="1" stroke-opacity="0.6"/>
+          <line x1="20" y1="120" x2="120" y2="20" stroke="#C8A96E" stroke-width="0.5" stroke-opacity="0.3"/>
+        </svg>
+      </div>
+
+      <div class="hero__content container">
+        <!-- FIX #8a / #12a: eyebrow already contains "St. George & Washington County, UT" — PASS; refined for keyword clarity -->
+        <p class="hero__eyebrow reveal-item">Mobile Auto Detailing · St. George &amp; Washington County, UT</p>
+        <!-- FIX #3: H1 refined to contain primary keyword naturally while keeping brand voice -->
+        <h1 class="hero__headline reveal-item">
+          St. George's Premier<br />Mobile Auto Detailing.
+        </h1>
+
+        <!-- FIX #8a: hero subtext now explicitly names the service and location -->
+        <p class="hero__sub reveal-item">
+          Professional mobile detailing that comes to you in St. George, UT. Ceramic coatings. Paint correction. Complete details — at your home or office.
+        </p>
+        <div class="hero__ctas reveal-item">
+          <a href="#contact" class="btn btn--outline-gold btn--pill btn--lg">Begin Your Project</a>
+          <a href="#services" class="btn btn--ghost btn--pill btn--lg">View Services ↓</a>
+        </div>
+        <div class="hero__divider" aria-hidden="true"></div>
+        <p class="hero__service-area reveal-item">Serving St. George · Washington · Hurricane · Santa Clara · Ivins · Washington County, UT</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         3. TRUST STRIP
+    ============================================================ -->
+    <section class="trust" aria-label="Trust signals">
+      <div class="trust__inner container">
+        <div class="trust__item">
+          <div class="trust__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z" fill="#C8A96E"/></svg>
+          </div>
+          <div class="trust__text">
+            <span class="trust__stars" aria-label="5 stars">★★★★★</span>
+            <span class="trust__label">Google Reviews</span>
+          </div>
+        </div>
+        <div class="trust__divider" aria-hidden="true"></div>
+        <div class="trust__item">
+          <div class="trust__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" stroke="#C8A96E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="trust__text">
+            <span class="trust__value">Licensed</span>
+            <span class="trust__label">&amp; Insured</span>
+          </div>
+        </div>
+        <div class="trust__divider" aria-hidden="true"></div>
+        <div class="trust__item">
+          <div class="trust__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.25C17.25 22.15 21 17.25 21 12V7l-9-5z" fill="#C8A96E" opacity="0.2"/><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.25C17.25 22.15 21 17.25 21 12V7l-9-5z" stroke="#C8A96E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#C8A96E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="trust__text">
+            <span class="trust__value">Certified</span>
+            <span class="trust__label">Ceramic Installer</span>
+          </div>
+        </div>
+        <div class="trust__divider" aria-hidden="true"></div>
+        <div class="trust__item">
+          <div class="trust__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke="#C8A96E" stroke-width="1.5"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke="#C8A96E" stroke-width="1.5"/></svg>
+          </div>
+          <div class="trust__text">
+            <span class="trust__value">Mobile Service</span>
+            <span class="trust__label">We Come to You</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         4. SERVICES
+    ============================================================ -->
+    <section class="services section" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow scroll-reveal">What We Do</p>
+          <!-- FIX #3: H2 for Services section — PASS (already existed) -->
+          <h2 class="section-title scroll-reveal" id="services-heading">Services Designed<br/>for Perfection</h2>
+        </div>
+
+        <div class="services__grid">
+          <article class="service-card scroll-reveal">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 4l2 6h6l-5 3.6 1.9 6-4.9-3.5-4.9 3.5 1.9-6L8 10h6L16 4z" stroke="#C8A96E" stroke-width="1.5" stroke-linejoin="round"/><circle cx="16" cy="16" r="12" stroke="#C8A96E" stroke-width="1" stroke-dasharray="2 4" opacity="0.4"/></svg>
+            </div>
+            <!-- FIX #8b: service name reinforced with location context in description -->
+            <h3 class="service-card__title">Premium Mobile Detail</h3>
+            <p class="service-card__desc">Complete interior &amp; exterior restoration in St. George and Washington County, UT. Clay bar treatment, paint decontamination, hand polish, and sealed finish — performed at your location.</p>
+            <a href="#contact" class="service-card__link">Get a Quote <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="service-card scroll-reveal">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 4L4 10v7c0 7 5.25 13.5 12 15 6.75-1.5 12-8 12-15v-7L16 4z" stroke="#C8A96E" stroke-width="1.5" stroke-linejoin="round"/><path d="M16 4L4 10v7c0 7 5.25 13.5 12 15 6.75-1.5 12-8 12-15v-7L16 4z" fill="#C8A96E" fill-opacity="0.08"/><path d="M11 16c1.5 2 3 3.5 5 4.5 2-2 4-4.5 5-7" stroke="#C8A96E" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="service-card__title">Ceramic Coating</h3>
+            <p class="service-card__desc">Nano-ceramic protection bonded directly to your paint. Hydrophobic. Self-cleaning. Mirror-like gloss that lasts years — ideal for St. George's intense UV and desert conditions.</p>
+            <a href="#contact" class="service-card__link">Get a Quote <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="service-card scroll-reveal">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="11" stroke="#C8A96E" stroke-width="1.5"/><path d="M10 16c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#C8A96E" stroke-width="1.5" stroke-linecap="round"/><path d="M8 22c1.5-1.5 4.5-2.5 8-2.5s6.5 1 8 2.5" stroke="#C8A96E" stroke-width="1" stroke-linecap="round" opacity="0.5"/><circle cx="16" cy="13" r="2" fill="#C8A96E" fill-opacity="0.2" stroke="#C8A96E" stroke-width="1"/></svg>
+            </div>
+            <h3 class="service-card__title">Paint Correction</h3>
+            <p class="service-card__desc">A multi-step process to remove swirl marks, scratches, and holograms from your paint. We start with chemical decontamination and clay bar to strip embedded contaminants, then use machine compounding to cut out deeper defects, and finish with a fine polish that restores a mirror-like, flawless surface. Available throughout Washington County, UT.</p>
+            <a href="#contact" class="service-card__link">Get a Quote <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+
+        <div class="services__footer scroll-reveal">
+          <p class="services__note">All services performed at your home, office, or preferred location in St. George and surrounding Washington County, UT. No drop-off required.<br><span style="font-size:0.85em;color:var(--color-text-muted);">Paint Protection Film (PPF) available by arrangement — contact us for details.</span></p>
+          <a href="#contact" class="btn btn--gold-text">Get a Custom Quote <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         4b. PRICING
+    ============================================================ -->
+    <section class="pricing section" id="pricing" aria-labelledby="pricing-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow scroll-reveal">Transparent Pricing</p>
+          <h2 class="section-title scroll-reveal" id="pricing-heading">What to Expect<br/>to Invest</h2>
+          <p class="section-subtitle scroll-reveal">All pricing is based on vehicle size and condition. Final quotes are confirmed before any work begins &mdash; no surprises.</p>
+        </div>
+
+        <!-- DETAILING PACKAGES -->
+        <div class="pricing__category scroll-reveal">
+          <h3 class="pricing__cat-title">Mobile Detailing Packages</h3>
+          <div class="pricing__cards">
+
+            <div class="pricing__card">
+              <div class="pricing__card-header">
+                <h4 class="pricing__card-name">The Essential</h4>
+              </div>
+              <p class="pricing__card-desc">Hand wash, full vacuum, surface wipe-down, tire &amp; wheel clean, tire shine, door jambs, streak-free windows, air freshener</p>
+              <div class="pricing__card-prices">
+                <div class="pricing__pill"><span class="pricing__pill-label">Sedan</span><span class="pricing__pill-price">$149</span></div>
+                <div class="pricing__pill"><span class="pricing__pill-label">SUV / Truck</span><span class="pricing__pill-price">$179</span></div>
+                <div class="pricing__pill"><span class="pricing__pill-label">XL / Van</span><span class="pricing__pill-price">$199</span></div>
+              </div>
+            </div>
+
+            <div class="pricing__card pricing__card--featured">
+              <div class="pricing__card-header">
+                <h4 class="pricing__card-name">The Lux Detail</h4>
+                <span class="pricing__badge">Most Popular</span>
+              </div>
+              <p class="pricing__card-desc">Everything in The Essential, plus foam cannon pre-wash, bug &amp; tar removal, iron decontamination, leather conditioning, and steam-cleaned surfaces &mdash; a complete reset inside and out.</p>
+              <div class="pricing__card-prices">
+                <div class="pricing__pill"><span class="pricing__pill-label">Sedan</span><span class="pricing__pill-price">$269</span></div>
+                <div class="pricing__pill"><span class="pricing__pill-label">SUV / Truck</span><span class="pricing__pill-price">$309</span></div>
+                <div class="pricing__pill"><span class="pricing__pill-label">XL / Van</span><span class="pricing__pill-price">$349</span></div>
+              </div>
+            </div>
+
+            <div class="pricing__card">
+              <div class="pricing__card-header">
+                <h4 class="pricing__card-name">The Elite</h4>
+              </div>
+              <p class="pricing__card-desc">Everything in Lux + machine polish, carpet shampoo &amp; extraction, wheel well cleaning, paint decontamination</p>
+              <div class="pricing__card-prices">
+                <div class="pricing__pill"><span class="pricing__pill-label">Sedan</span><span class="pricing__pill-price">$399</span></div>
+                <div class="pricing__pill"><span class="pricing__pill-label">SUV / Truck</span><span class="pricing__pill-price">$469</span></div>
+                <div class="pricing__pill"><span class="pricing__pill-label">XL / Van</span><span class="pricing__pill-price">$529</span></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CERAMIC COATING -->
+        <div class="pricing__category scroll-reveal">
+          <h3 class="pricing__cat-title">Ceramic Coating</h3>
+          <div class="pricing__cards">
+
+            <div class="pricing__card">
+              <div class="pricing__card-header">
+                <h4 class="pricing__card-name">Lux Protect &mdash; 2-Year</h4>
+              </div>
+              <p class="pricing__card-desc">Decon wash, clay bar, light polish, 2-year ceramic coating</p>
+              <div class="pricing__card-prices">
+                <div class="pricing__pill"><span class="pricing__pill-label">Sedan</span><span class="pricing__pill-price">$599</span></div>
+                <div class="pricing__pill"><span class="pricing__pill-label">SUV / Truck</span><span class="pricing__pill-price">$749</span></div>
+                <div class="pricing__pill"><span class="pricing__pill-label">XL / Van</span><span class="pricing__pill-price">$849</span></div>
+              </div>
+            </div>
+
+            <div class="pricing__card pricing__card--featured">
+              <div class="pricing__card-header">
+                <h4 class="pricing__card-name">Lux Elite Coat &mdash; 5-Year</h4>
+                <span class="pricing__badge">Most Popular</span>
+              </div>
+              <p class="pricing__card-desc">Single-stage paint correction, full decon, ceramic glass &amp; trim coating &mdash; 5-year protection included.</p>
+              <div class="pricing__card-prices">
+                <div class="pricing__pill"><span class="pricing__pill-label">Sedan</span><span class="pricing__pill-price">$949</span></div>
+                <div class="pricing__pill"><span class="pricing__pill-label">SUV / Truck</span><span class="pricing__pill-price">$1,099</span></div>
+                <div class="pricing__pill"><span class="pricing__pill-label">XL / Van</span><span class="pricing__pill-price">$1,299</span></div>
+              </div>
+            </div>
+
+            <div class="pricing__card">
+              <div class="pricing__card-header">
+                <h4 class="pricing__card-name">Lux Elite Pro &mdash; Premium Multi-Layer</h4>
+              </div>
+              <p class="pricing__card-desc">Two-stage correction, ceramic wheels + glass + trim, 5-year transferable warranty</p>
+              <div class="pricing__card-prices">
+                <div class="pricing__pill"><span class="pricing__pill-label">Sedan</span><span class="pricing__pill-price">$1,599</span></div>
+                <div class="pricing__pill"><span class="pricing__pill-label">SUV / Truck</span><span class="pricing__pill-price">$1,949</span></div>
+                <div class="pricing__pill"><span class="pricing__pill-label">XL / Van</span><span class="pricing__pill-price">$2,199</span></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- PAINT CORRECTION -->
+        <div class="pricing__category scroll-reveal">
+          <h3 class="pricing__cat-title">Paint Correction</h3>
+          <div class="pricing__cards">
+
+            <div class="pricing__card">
+              <div class="pricing__card-header">
+                <h4 class="pricing__card-name">Single-Stage</h4>
+              </div>
+              <p class="pricing__card-desc">Removes light swirls, oxidation, and water spots</p>
+              <div class="pricing__card-prices">
+                <div class="pricing__pill"><span class="pricing__pill-label">Sedan</span><span class="pricing__pill-price">$289</span></div>
+                <div class="pricing__pill"><span class="pricing__pill-label">SUV / Truck</span><span class="pricing__pill-price">$375</span></div>
+              </div>
+            </div>
+
+            <div class="pricing__card">
+              <div class="pricing__card-header">
+                <h4 class="pricing__card-name">Two-Stage</h4>
+              </div>
+              <p class="pricing__card-desc">Cuts + refines &mdash; removes moderate scratches and swirl marks</p>
+              <div class="pricing__card-prices">
+                <div class="pricing__pill"><span class="pricing__pill-label">Sedan</span><span class="pricing__pill-price">$469</span></div>
+                <div class="pricing__pill"><span class="pricing__pill-label">SUV / Truck</span><span class="pricing__pill-price">$599</span></div>
+              </div>
+            </div>
+
+            <div class="pricing__card">
+              <div class="pricing__card-header">
+                <h4 class="pricing__card-name">Three-Stage</h4>
+              </div>
+              <p class="pricing__card-desc">Show-level correction &mdash; near-defect-free mirror finish</p>
+              <div class="pricing__card-prices">
+                <div class="pricing__pill"><span class="pricing__pill-label">Sedan</span><span class="pricing__pill-price">$749</span></div>
+                <div class="pricing__pill"><span class="pricing__pill-label">SUV / Truck</span><span class="pricing__pill-price">$949</span></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!-- ADD-ONS -->
+        <div class="pricing__group scroll-reveal" style="margin-top:3rem">
+          <h3 class="pricing__group-title" style="text-align:center;font-size:1.4rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-gold);margin-bottom:1.5rem">Add-Ons</h3>
+          <div class="addons__grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;max-width:900px;margin:0 auto">
+            <div class="addon__item" style="display:flex;justify-content:space-between;align-items:center;padding:0.75rem 1.25rem;border:1px solid rgba(196,160,80,0.25);border-radius:6px;background:rgba(255,255,255,0.03)"><span class="addon__name" style="color:var(--color-text)">Headlight Restoration</span><span class="addon__price" style="color:var(--color-gold);font-weight:600">$85</span></div>
+            <div class="addon__item" style="display:flex;justify-content:space-between;align-items:center;padding:0.75rem 1.25rem;border:1px solid rgba(196,160,80,0.25);border-radius:6px;background:rgba(255,255,255,0.03)"><span class="addon__name" style="color:var(--color-text)">Engine Bay Detail</span><span class="addon__price" style="color:var(--color-gold);font-weight:600">$99</span></div>
+            <div class="addon__item" style="display:flex;justify-content:space-between;align-items:center;padding:0.75rem 1.25rem;border:1px solid rgba(196,160,80,0.25);border-radius:6px;background:rgba(255,255,255,0.03)"><span class="addon__name" style="color:var(--color-text)">Ozone Odor Treatment</span><span class="addon__price" style="color:var(--color-gold);font-weight:600">$75</span></div>
+            <div class="addon__item" style="display:flex;justify-content:space-between;align-items:center;padding:0.75rem 1.25rem;border:1px solid rgba(196,160,80,0.25);border-radius:6px;background:rgba(255,255,255,0.03)"><span class="addon__name" style="color:var(--color-text)">Pet Hair Removal</span><span class="addon__price" style="color:var(--color-gold);font-weight:600">$75</span></div>
+            <div class="addon__item" style="display:flex;justify-content:space-between;align-items:center;padding:0.75rem 1.25rem;border:1px solid rgba(196,160,80,0.25);border-radius:6px;background:rgba(255,255,255,0.03)"><span class="addon__name" style="color:var(--color-text)">Carpet &amp; Upholstery Shampoo</span><span class="addon__price" style="color:var(--color-gold);font-weight:600">$100&ndash;$150</span></div>
+            <div class="addon__item" style="display:flex;justify-content:space-between;align-items:center;padding:0.75rem 1.25rem;border:1px solid rgba(196,160,80,0.25);border-radius:6px;background:rgba(255,255,255,0.03)"><span class="addon__name" style="color:var(--color-text)">Steam Interior Treatment</span><span class="addon__price" style="color:var(--color-gold);font-weight:600">$99</span></div>
+            <div class="addon__item" style="display:flex;justify-content:space-between;align-items:center;padding:0.75rem 1.25rem;border:1px solid rgba(196,160,80,0.25);border-radius:6px;background:rgba(255,255,255,0.03)"><span class="addon__name" style="color:var(--color-text)">Iron Decontamination</span><span class="addon__price" style="color:var(--color-gold);font-weight:600">$75</span></div>
+            <div class="addon__item" style="display:flex;justify-content:space-between;align-items:center;padding:0.75rem 1.25rem;border:1px solid rgba(196,160,80,0.25);border-radius:6px;background:rgba(255,255,255,0.03)"><span class="addon__name" style="color:var(--color-text)">Ceramic Wheel Coating</span><span class="addon__price" style="color:var(--color-gold);font-weight:600">$199</span></div>
+            <div class="addon__item" style="display:flex;justify-content:space-between;align-items:center;padding:0.75rem 1.25rem;border:1px solid rgba(196,160,80,0.25);border-radius:6px;background:rgba(255,255,255,0.03)"><span class="addon__name" style="color:var(--color-text)">Ceramic Glass Coating</span><span class="addon__price" style="color:var(--color-gold);font-weight:600">$199</span></div>
+
+          </div>
+        </div>
+
+        <div class="pricing__footer scroll-reveal">
+          <p>Paint Protection Film (PPF) available by drop-off arrangement &mdash; <a href="#contact" style="color:var(--color-gold)">contact us for a custom quote</a>.</p>
+          <a href="#contact" class="btn btn--gold btn--pill btn--lg">Book Your Detail &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         5. WHY LUX ELITE
+    ============================================================ -->
+    <section class="why section" id="why" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="why__grid">
+          <div class="why__image-col scroll-reveal">
+            <div class="why__img-wrap">
+              <!-- FIX #7a / #10a: width/height attributes added; alt text already descriptive — PASS -->
+              <img src="./ceramic-water-bead.png" alt="Close-up of water beading on ceramic-coated luxury car paint — the hallmark of professional ceramic protection in St. George UT" width="600" height="700" loading="lazy" />
+              <div class="why__img-overlay" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <div class="why__content-col">
+            <p class="eyebrow scroll-reveal">The Standard We Hold</p>
+            <!-- FIX #3: H2 confirmed present — PASS -->
+            <h2 class="section-title scroll-reveal" id="why-heading">Why Lux Elite<br/>Auto Spa</h2>
+
+            <div class="why__pillars">
+              <div class="why__pillar scroll-reveal">
+                <div class="why__pillar-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z" fill="#C8A96E" opacity="0.9"/></svg>
+                </div>
+                <div>
+                  <h3 class="why__pillar-title">Elite-Grade Products Only</h3>
+                  <p class="why__pillar-body">We use only professional-grade chemicals, Ceramic Pro coatings, and manufacturer-approved processes.</p>
+                </div>
+              </div>
+
+              <div class="why__pillar scroll-reveal">
+                <div class="why__pillar-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke="#C8A96E" stroke-width="1.5"/><circle cx="12" cy="11" r="3" stroke="#C8A96E" stroke-width="1.5"/></svg>
+                </div>
+                <div>
+                  <h3 class="why__pillar-title">We Come to You in St. George &amp; Washington County</h3>
+                  <p class="why__pillar-body">No driving across town. No waiting rooms. We arrive fully equipped and ready at your location anywhere in Washington County, UT.</p>
+                </div>
+              </div>
+
+              <div class="why__pillar scroll-reveal">
+                <div class="why__pillar-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" stroke="#C8A96E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div>
+                  <h3 class="why__pillar-title">Guaranteed Satisfaction</h3>
+                  <p class="why__pillar-body">Every service is backed by our quality guarantee. If it's not right, we make it right.</p>
+                </div>
+              </div>
+            </div>
+
+            <blockquote class="why__quote scroll-reveal">
+              "True detailing is preservation, not just cleaning."
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         6. HOW IT WORKS
+    ============================================================ -->
+    <section class="process section" id="process" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow scroll-reveal">Your Experience</p>
+          <!-- FIX #3: H2 confirmed present — PASS -->
+          <h2 class="section-title scroll-reveal" id="process-heading">From Booking<br/>to Spotless</h2>
+        </div>
+
+        <div class="process__steps">
+          <div class="process__connector" aria-hidden="true"></div>
+
+          <div class="process__step scroll-reveal">
+            <div class="process__num" aria-hidden="true">01</div>
+            <h3 class="process__title">Book Online or Call</h3>
+            <p class="process__desc">Tell us your vehicle, service, and location in St. George or Washington County. We'll confirm your appointment within hours.</p>
+          </div>
+
+          <div class="process__step scroll-reveal">
+            <div class="process__num" aria-hidden="true">02</div>
+            <h3 class="process__title">We Come to You</h3>
+            <p class="process__desc">Our fully-equipped mobile unit arrives at your home, office, or anywhere in Washington County, UT.</p>
+          </div>
+
+          <div class="process__step scroll-reveal">
+            <div class="process__num" aria-hidden="true">03</div>
+            <h3 class="process__title">Precision Detail Work</h3>
+            <p class="process__desc">Every service is performed to a luxury standard using elite products and professional techniques.</p>
+          </div>
+
+          <div class="process__step scroll-reveal">
+            <div class="process__num" aria-hidden="true">04</div>
+            <h3 class="process__title">Drive Away Transformed</h3>
+            <p class="process__desc">Inspect your vehicle, then enjoy the results. Maintenance tips included.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         7. GALLERY / BEFORE-AFTER
+    ============================================================ -->
+    <!-- TODO: Replace placeholders with real before/after photography -->
+    <section class="gallery section" id="gallery" aria-labelledby="gallery-heading">
+      <div class="container">
+        <div class="section-header">
+          <!-- FIX #3: H2 confirmed present — PASS -->
+          <h2 class="section-title scroll-reveal" id="gallery-heading">Real Work. Real Results.</h2>
+          <p class="section-sub scroll-reveal">Before &amp; after transformations on vehicles we've serviced in St. George and Washington County, UT.</p>
+        </div>
+
+        <div class="gallery__pairs">
+
+          <!-- Pair 1: Driver footwell -->
+          <div class="gallery__pair scroll-reveal">
+            <div class="gallery__pair-label">Driver Footwell</div>
+            <div class="gallery__pair-images">
+              <div class="gallery__half">
+                <img src="./before-footwell.jpg" alt="Before detail — dirty driver footwell, Hyundai Santa Fe" width="600" height="400" loading="lazy" />
+                <div class="gallery__label gallery__label--before">Before</div>
+              </div>
+              <div class="gallery__half">
+                <img src="./after-footwell.jpg" alt="After detail — clean driver footwell with MaxFloorMat liner" width="600" height="400" loading="lazy" />
+                <div class="gallery__label gallery__label--after">After</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- Professional photography makes the biggest impact. Shoot your first 5 jobs and upload here. -->
+      </div>
+    </section>
+
+    <!-- ============================================================
+         8. REVIEWS
+    ============================================================ -->
+    <!-- OUR WORK VIDEO SECTION -->
+    <section class="ourwork section" id="ourwork" aria-labelledby="ourwork-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow scroll-reveal">See It in Action</p>
+          <h2 class="section-title scroll-reveal" id="ourwork-heading">Our Work</h2>
+          <p class="section-sub scroll-reveal">Watch a full detail transformation from start to finish — this is what Lux Elite brings to every vehicle.</p>
+        </div>
+        <div class="ourwork__video-wrap scroll-reveal">
+          <div class="ourwork__video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/i1e--WswytU?rel=0&modestbranding=1&color=white&vq=hd1080&hd=1"
+              title="Lux Elite Auto Spa — Full Detail Highlight Reel"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+        <p class="ourwork__quality-tip scroll-reveal">For best quality, select 1080p in the player settings <span aria-hidden="true">⚙</span></p>
+        <div class="ourwork__cta scroll-reveal">
+          <a href="#contact" class="btn btn--gold-fill btn--pill">Book Your Detail</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews — Card 1 is a verified Google review -->
+    <section class="reviews section" id="reviews" aria-labelledby="reviews-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow scroll-reveal">What Our Clients Say</p>
+          <!-- FIX #3: H2 confirmed present — PASS -->
+          <h2 class="section-title scroll-reveal" id="reviews-heading">Trusted by Drivers<br/>Across Washington County</h2>
+          <div class="reviews__stars scroll-reveal" aria-label="5 star rated">★★★★★</div>
+        </div>
+
+        <div class="reviews__grid">
+          <blockquote class="review-card review-card--featured scroll-reveal">
+            <div class="review-card__verified">✓ Verified Google Review</div>
+            <div class="review-card__stars" aria-label="5 stars">★★★★★</div>
+            <p class="review-card__text">"I brought my car in for a paint correction, and I honestly wasn't expecting this level of transformation. The paint looked brand new again. Years of swirl marks, light scratches, and dullness were gone. What impressed me most was the attention to detail — every inch of the vehicle looked meticulously cared for. Finding businesses that actually exceed expectations is rare these days, but this team absolutely did."</p>
+            <footer class="review-card__author">
+              <span class="review-card__name">Nick Chiodini</span>
+              <span class="review-card__location">Google Review · 20 hours ago</span>
+            </footer>
+          </blockquote>
+
+          <blockquote class="review-card scroll-reveal">
+            <div class="review-card__verified">✓ Verified Google Review</div>
+            <div class="review-card__stars" aria-label="5 stars">★★★★★</div>
+            <p class="review-card__text">"I've had them detail two of my vehicles. Very impressed. Very thorough and great attention to detail."</p>
+            <footer class="review-card__author">
+              <span class="review-card__name">Nathan Whitlatch</span>
+              <span class="review-card__location">Google Review · 1 day ago</span>
+            </footer>
+          </blockquote>
+
+          <blockquote class="review-card scroll-reveal" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border:1px dashed rgba(200,169,110,0.35);background:rgba(200,169,110,0.04);">
+            <div class="review-card__stars" aria-label="5 stars" style="margin-bottom:0.75rem">★★★★★</div>
+            <p class="review-card__text" style="color:var(--color-text-muted);font-style:normal;">Your experience could be here. If we detailed your vehicle, we'd love to hear about it.</p>
+            <a href="https://www.google.com/maps/place/Lux+Elite+Auto+Spa/@37.309132,-113.4759755,10z/data=!3m1!4b1!4m6!3m5!1s0xa64648547ca7d80b:0x4887164a4910c74f!8m2!3d37.309132!4d-113.4759755!16s%2Fg%2F11zf_w4hxw" target="_blank" rel="noopener noreferrer" style="margin-top:1rem;color:var(--color-gold);font-size:0.85rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(200,169,110,0.4);padding:0.5rem 1.25rem;border-radius:999px;">Leave a Review</a>
+          </blockquote>
+        </div>
+
+        <div class="reviews__cta scroll-reveal">
+          <a href="https://www.google.com/maps/place/Lux+Elite+Auto+Spa/@37.309132,-113.4759755,10z/data=!3m1!4b1!4m6!3m5!1s0xa64648547ca7d80b:0x4887164a4910c74f!8m2!3d37.309132!4d-113.4759755!16s%2Fg%2F11zf_w4hxw" target="_blank" rel="noopener noreferrer" class="btn btn--outline-gold btn--pill">Leave Us a Review on Google</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         9. FAQ SECTION (new — supports FAQPage schema above)
+    ============================================================ -->
+    <section class="faq section" id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow scroll-reveal">Common Questions</p>
+          <h2 class="section-title scroll-reveal" id="faq-heading">Mobile Detailing FAQs<br/>— St. George, UT</h2>
+        </div>
+        <div class="faq__list">
+          <details class="faq__item scroll-reveal">
+            <summary class="faq__question">Do you offer mobile auto detailing in St. George, Utah?</summary>
+            <div class="faq__answer">
+              <p>Yes. Lux Elite Auto Spa is a fully mobile detailing service based in St. George, UT. We come to your home, office, or any preferred location throughout Washington County — including St. George, Washington, Hurricane, Santa Clara, and Ivins — with all equipment and products on board. No drop-off required.</p>
+            </div>
+          </details>
+          <details class="faq__item scroll-reveal">
+            <summary class="faq__question">How long does a ceramic coating last in St. George's desert climate?</summary>
+            <div class="faq__answer">
+              <p>A professional-grade ceramic coating applied by Lux Elite Auto Spa typically lasts 2–5 years depending on the coating tier and maintenance routine. St. George's intense UV exposure and desert dust make ceramic coating especially valuable — the hydrophobic, UV-resistant layer protects your paint from fading, oxidation, and embedded contaminants far better than wax alone.</p>
+            </div>
+          </details>
+          <details class="faq__item scroll-reveal">
+            <summary class="faq__question">What is paint correction and does my car need it?</summary>
+            <div class="faq__answer">
+              <p>Paint correction is a multi-step machine polishing process that removes surface defects like swirl marks, scratches, oxidation, and water spot etching. If your paint looks dull or shows spiderweb scratches under direct light, paint correction will restore a flawless, mirror-like finish. It is also recommended before ceramic coating to ensure a perfect bond.</p>
+            </div>
+          </details>
+          <details class="faq__item scroll-reveal">
+            <summary class="faq__question">How much does mobile auto detailing cost in St. George, UT?</summary>
+            <div class="faq__answer">
+              <p>Pricing varies based on vehicle size, condition, and service selected. Contact us at <a href="tel:7023031925">702-303-1925</a> or use the form below for a free, no-obligation quote tailored to your vehicle.</p>
+            </div>
+          </details>
+          <details class="faq__item scroll-reveal">
+            <summary class="faq__question">Do you detail cars in Washington, Hurricane, and Santa Clara UT?</summary>
+            <div class="faq__answer">
+              <p>Absolutely. Lux Elite Auto Spa serves all of Washington County, Utah — including Washington, Hurricane, Santa Clara, Ivins, and St. George. Our fully-equipped mobile unit comes directly to your location anywhere in the county.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         10. CONTACT / BOOKING
+    ============================================================ -->
+    <section class="contact section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow scroll-reveal">Begin Your Project</p>
+          <!-- FIX #8c: Contact heading reinforces location -->
+          <h2 class="section-title scroll-reveal" id="contact-heading">Request Your<br/>Consultation in St. George, UT</h2>
+        </div>
+
+        <div class="contact__grid">
+          <!-- Left: Form -->
+          <div class="contact__form-col scroll-reveal">
+            <!-- FIX #10b: All form inputs already have associated labels — PASS confirmed -->
+            <form class="contact-form" id="contact-form" novalidate aria-label="Booking consultation form for mobile auto detailing in St. George, UT">
+              <div class="form-row form-row--half">
+                <div class="form-group">
+                  <label for="f-name">Name</label>
+                  <input type="text" id="f-name" name="name" placeholder="Your full name" autocomplete="name" required />
+                </div>
+                <div class="form-group">
+                  <label for="f-phone">Phone</label>
+                  <input type="tel" id="f-phone" name="phone" placeholder="Your phone number" autocomplete="tel" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="f-email">Email</label>
+                <input type="email" id="f-email" name="email" placeholder="Your email address" autocomplete="email" required />
+              </div>
+              <div class="form-group">
+                <label for="f-vehicle">Vehicle</label>
+                <input type="text" id="f-vehicle" name="vehicle" placeholder="Make / Model / Year (e.g. 2024 Ford F-150)" required />
+              </div>
+              <div class="form-group">
+                <label for="f-service">Service</label>
+                <select id="f-service" name="service" required>
+                  <option value="" disabled selected>Select a service</option>
+                  <option value="premium-detail">Premium Mobile Detail</option>
+                  <option value="ceramic-coating">Ceramic Coating</option>
+                  <option value="paint-correction">Paint Correction</option>
+                  <option value="not-sure">Not Sure — Let's Talk</option>
+                </select>
+              </div>
+              <div class="form-row form-row--half">
+                <div class="form-group">
+                  <label for="f-date">Preferred Date</label>
+                  <input type="date" id="f-date" name="date" />
+                </div>
+                <div class="form-group">
+                  <label for="f-location">Your Location / Address</label>
+                  <input type="text" id="f-location" name="location" placeholder="St. George, Washington, Hurricane…" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="f-notes">Additional Notes</label>
+                <textarea id="f-notes" name="notes" rows="3" placeholder="Any details about your vehicle or service preferences…"></textarea>
+              </div>
+              <!-- FIX #10c: aria-label added to submit button for clarity -->
+              <button type="submit" class="btn btn--gold-fill btn--full" aria-label="Submit consultation request for mobile auto detailing in St. George, UT">Request My Consultation</button>
+              <div class="form-success" id="form-success" role="alert" aria-live="polite">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 18a8 8 0 100-16 8 8 0 000 16z" fill="#C8A96E" opacity="0.2"/><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 10l2 2 4-4" stroke="#C8A96E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Thank you! We'll be in touch within a few hours.
+              </div>
+            </form>
+          </div>
+
+          <!-- Right: Info Panel -->
+          <aside class="contact__info-col scroll-reveal" aria-label="Contact information for Lux Elite Auto Spa in St. George, UT">
+            <div class="contact__info-panel">
+              <p class="contact__info-label">Call or Text Direct</p>
+              <a href="tel:7023031925" class="contact__phone" aria-label="Call Lux Elite Auto Spa at 702-303-1925">702-303-1925</a>
+
+              <div class="contact__divider" aria-hidden="true"></div>
+
+              <!-- FIX #8c: Location reinforced in contact section -->
+              <p class="contact__info-label">Serving St. George, UT &amp; Washington County</p>
+              <ul class="contact__cities" aria-label="Cities we serve in Washington County Utah">
+                <li>St. George, UT</li>
+                <li>Washington, UT</li>
+                <li>Hurricane, UT</li>
+                <li>Santa Clara, UT</li>
+                <li>Ivins, UT</li>
+                <li>All of Washington County, UT</li>
+              </ul>
+
+              <div class="contact__divider" aria-hidden="true"></div>
+
+              <p class="contact__info-label">Hours</p>
+              <ul class="contact__hours">
+                <li><span>Monday – Saturday</span><span>8 AM – 6 PM</span></li>
+                <li><span>Sunday</span><span>By Appointment</span></li>
+              </ul>
+
+
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__top container">
+      <div class="footer__brand">
+        <!-- FIX #7a: width/height attributes confirmed present (height=80); width added -->
+        <img src="./logo-clean.jpg" alt="Lux Elite Auto Spa — Mobile Auto Detailing St. George Utah" width="160" height="80" class="footer__logo" />
+        <p class="footer__tagline">— Attention to Detail —</p>
+      </div>
+
+      <div class="footer__cols">
+        <div class="footer__col">
+          <!-- FIX #3: Footer uses H3 (under H2 section headings) — no skipped levels — PASS -->
+          <h3 class="footer__col-title">Services</h3>
+          <ul>
+            <li><a href="#services">Premium Mobile Detailing</a></li>
+            <li><a href="#services">Ceramic Coatings</a></li>
+            <li><a href="#services">Paint Correction</a></li>
+            <li><a href="#contact">Get a Quote</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__col-title">Service Area</h3>
+          <ul>
+            <li>St. George, UT</li>
+            <li>Washington, UT</li>
+            <li>Hurricane, UT</li>
+            <li>Santa Clara, UT</li>
+            <li>Ivins, UT</li>
+            <li>Washington County, UT</li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__col-title">Contact</h3>
+          <ul>
+            <li><a href="tel:7023031925" class="footer__phone" aria-label="Call Lux Elite Auto Spa">702-303-1925</a></li>
+            <li>St. George, Utah 84770</li>
+            <li>
+              <div class="footer__social">
+                <a href="https://www.instagram.com/luxeliteautospa" target="_blank" rel="noopener noreferrer" aria-label="Lux Elite Auto Spa on Instagram" title="Instagram" class="footer__social-link">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+                  <span class="footer__social-label">Instagram</span>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61590665054074" target="_blank" rel="noopener noreferrer" aria-label="Lux Elite Auto Spa on Facebook" title="Facebook" class="footer__social-link">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span class="footer__social-label">Facebook</span>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom container">
+      <p>© 2026 Lux Elite Auto Spa. All rights reserved. | Mobile Auto Detailing · St. George, Utah</p>
+      <p><a href="./sitemap.xml">Sitemap</a></p>
+    </div>
+  </footer>
+
+  <!-- FIX: FAQ section styles injected inline to avoid requiring style.css edits -->
+  <style>
+    .faq__list { max-width: 800px; margin: 0 auto; }
+    .faq__item { border-bottom: 1px solid var(--color-border, #2A2A2A); padding: 1.25rem 0; }
+    .faq__question { cursor: pointer; font-size: 1.05rem; font-weight: 600; color: var(--color-text, #F0EEE9); list-style: none; padding-right: 1.5rem; position: relative; }
+    .faq__question::-webkit-details-marker { display: none; }
+    .faq__question::after { content: '+'; position: absolute; right: 0; top: 0; color: var(--color-gold, #C8A96E); font-size: 1.25rem; }
+    details[open] .faq__question::after { content: '−'; }
+    .faq__answer { padding: 0.75rem 0 0.25rem; color: var(--color-text-muted, #9A9490); line-height: 1.7; }
+    .faq__answer a { color: var(--color-gold, #C8A96E); }
+  </style>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>

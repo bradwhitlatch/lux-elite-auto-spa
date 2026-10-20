@@ -1,0 +1,7 @@
+# robots.txt — Lux Elite Auto Spa
+# https://www.luxeliteautospa.net/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.luxeliteautospa.net/sitemap.xml
